@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Two Talent — Creator management by Two Management</title>
+<meta name="description" content="Two Talent is the creator and influencer management division of Two Management. Opening soon in Barcelona.">
+<meta property="og:title" content="Two Talent">
+<meta property="og:description" content="Creator management by Two Management. Opening soon in Barcelona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1F22F0;      /* 2M logo blue */
+    --blue-deep:#1417C4;
+    --white:#FFFFFF;
+    --mist:#C9CBFF;      /* soft text on blue */
+    --line:rgba(255,255,255,.28);
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit}
+  html,body{height:100%;margin:0}
+  body{
+    background:var(--blue);
+    color:var(--white);
+    font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:1rem;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;
+    min-height:100%;
+    overflow-x:hidden;
+  }
+  .wrap{
+    flex:1;display:flex;flex-direction:column;justify-content:space-between;
+    padding:clamp(20px,4vw,56px);
+    gap:clamp(32px,6vh,72px);
+    min-height:100%;
+  }
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:.95rem}
+  header a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+  header a:hover{border-color:var(--white)}
+  .status{color:var(--mist)}
+
+  .mark{
+    font-family:"Bricolage Grotesque","Arial Narrow",Impact,sans-serif;
+    font-weight:800;
+    font-variation-settings:"wdth" 75,"opsz" 96;
+    font-size:min(24vw,30vh);
+    line-height:.86;
+    letter-spacing:-.015em;
+    margin:0;
+  }
+  .mark span{display:block}
+  .mark .two{padding-left:0}
+  .mark .talent{padding-left:clamp(.35em,9vw,1.2em)}
+
+  .foot{
+    display:grid;
+    grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(20px,3vw,48px);
+    border-top:1px solid var(--line);
+    padding-top:clamp(16px,2.5vh,28px);
+  }
+  .foot p{margin:0;max-width:34ch}
+  .lede{font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.4}
+  .small{color:var(--mist);font-size:.95rem}
+  .foot a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--line)}
+  .foot a:hover{border-color:var(--white)}
+  a:focus-visible{outline:2px solid var(--white);outline-offset:4px;border-radius:2px}
+
+  @media (max-width:720px){
+    .foot{grid-template-columns:1fr}
+    .mark .talent{padding-left:.25em}
+  }
+
+  /* one orchestrated entrance: the two words meet */
+  @media (prefers-reduced-motion:no-preference){
+    .mark .two{animation:fromLeft 1.1s cubic-bezier(.2,.8,.2,1) both}
+    .mark .talent{animation:fromRight 1.1s cubic-bezier(.2,.8,.2,1) .08s both}
+    .foot{animation:fade .8s ease .7s both}
+    @keyframes fromLeft{from{transform:translateX(-18vw);opacity:0}to{transform:none;opacity:1}}
+    @keyframes fromRight{from{transform:translateX(18vw);opacity:0}to{transform:none;opacity:1}}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="https://www.twomanagement.com/">Two Management</a>
+      <span class="status">Opening soon</span>
+    </header>
+
+    <h1 class="mark" aria-label="Two Talent">
+      <span class="two">Two</span>
+      <span class="talent">Talent</span>
+    </h1>
+
+    <div class="foot">
+      <p class="lede">Creator and influencer management from Two Management. Brand partnerships, campaigns and representation for the people your audience already follows.</p>
+      <p class="small">Paseo de Gracia 87, 2º<br>08008 Barcelona</p>
+      <p class="small">
+        <a href="https://www.twomanagement.com/">twomanagement.com</a><br>
+        <a href="https://www.instagram.com/twotalentmanagement/">@twotalentmanagement</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
